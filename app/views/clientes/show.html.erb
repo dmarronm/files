@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Username:</b>
+  <%= @cliente.username %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @cliente.name %>
+</p>
+
+<p>
+  <b>Password hash:</b>
+  <%= @cliente.password_hash %>
+</p>
+
+<p>
+  <b>Password salt:</b>
+  <%= @cliente.password_salt %>
+</p>
+
+<p>
+  <b>Limitspace:</b>
+  <%= @cliente.limitSpace %>
+</p>
+
+<p>
+  <b>Availablespace:</b>
+  <%= @cliente.availableSpace %>
+</p>
+
+<p>
+  <b>Usedbandwith:</b>
+  <%= @cliente.usedBandwith %>
+</p>
+
+
+<%= link_to 'Edit', edit_cliente_path(@cliente) %> |
+<%= link_to 'Back', clientes_path %>

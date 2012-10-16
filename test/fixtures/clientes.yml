@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  username: MyString
+  name: MyString
+  password_hash: MyString
+  password_salt: MyString
+  limitSpace: 1
+  availableSpace: 1
+  usedBandwith: 1
+
+two:
+  username: MyString
+  name: MyString
+  password_hash: MyString
+  password_salt: MyString
+  limitSpace: 1
+  availableSpace: 1
+  usedBandwith: 1

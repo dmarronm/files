@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Files</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<% flash.each do |name, msg| %>
+  <table border="1" width="40%" align="center" height="80">
+  <tr align="center">
+    <td bgcolor="#660000">
+    <font color="#FFF"><b>
+    <%= content_tag :div, msg, :id=> "flash#{name}" %>
+    </b></font>
+    </td>
+  </tr>    
+  </table>    
+<% end %>   
+
+<%= yield %>
+
+</body>
+</html>

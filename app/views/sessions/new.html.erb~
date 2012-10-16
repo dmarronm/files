@@ -1,0 +1,50 @@
+<p>
+<br><br>
+</p>
+<table border="1" width="300" align="center">
+<tr align="center">
+  <td>
+    <h1>Autentificaci&oacute;n</h1>
+  </td>
+</tr>
+<tr>
+  <td>
+    <%= form_tag sessions_path do %>
+    <table border="0" width="100%">
+    <tr>
+      <td>        
+        <%= label_tag :Usuario %>
+      </td>
+    </tr>
+    <tr align="center">
+      <td>
+        <%= text_field_tag :username, params[:username] %>
+      </td>        
+    </tr>
+    <tr>
+      <td><br /></td>
+    </tr>    
+    <tr>
+      <td>        
+        <%= label_tag :Password %>
+      </td>
+    </tr>
+    <tr align="center">
+      <td>        
+        <%= password_field_tag :password %>
+      </td>
+    </tr>
+    <tr align="right">
+      <td>            
+        <p class="button"><%= submit_tag %></p>
+      </td>
+    </tr>
+  </table>
+  <% end %>
+</td>
+</tr>
+</table>
+</td>
+<tr>
+</table>
+
