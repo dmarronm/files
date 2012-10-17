@@ -1,0 +1,27 @@
+<h1>Categorias</h1>
+
+<table border="1" width="800">
+  <tr>
+    <th>Nombre</th>
+    <th>Limite de espacio</th>
+    <th>Espacio disponible</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @categoria.each do |categorium| %>
+  <tr>
+    <td><%= categorium.name %></td>
+    <td><%= categorium.limitSpace %></td>
+    <td><%= categorium.availableSpace %></td>
+    <td><%= link_to 'Show', categorium %></td>
+    <td><%= link_to 'Edit', edit_categorium_path(categorium) %></td>
+    <td><%= link_to 'Destroy', categorium, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Crear nueva categoria', new_categorium_path %>

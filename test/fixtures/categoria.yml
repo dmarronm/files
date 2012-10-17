@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  limitSpace: 1
+  availableSpace: 1
+
+two:
+  name: MyString
+  limitSpace: 1
+  availableSpace: 1
