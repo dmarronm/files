@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     cliente = Cliente.authenticate(params[:username],params[:password])
     if cliente
         session[:idcliente] = cliente.idcliente
-        redirect_to root_url, #:notice => "Autorizado"
+        redirect_to cate_url, :notice => session[:idcliente]
     else
         flash.now.alert = "Usuario o password invalido"
         render "new"
@@ -15,6 +15,6 @@ class SessionsController < ApplicationController
   
   def destroy
     session[:idcliente] = nil
-    redirect_to root_url, :notice => "Sesión terminada"
+    redirect_to root_url, :notice => "Sesion terminada"
   end
 end

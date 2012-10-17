@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @categorium.name %>
+</p>
+
+<p>
+  <b>Limitspace:</b>
+  <%= @categorium.limitSpace %>
+</p>
+
+<p>
+  <b>Availablespace:</b>
+  <%= @categorium.availableSpace %>
+</p>
+
+
+<%= link_to 'Edit', edit_categorium_path(@categorium) %> |
+<%= link_to 'Back', categoria_path %>

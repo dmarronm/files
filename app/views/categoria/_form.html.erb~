@@ -1,0 +1,30 @@
+<%= form_for(@categorium) do |f| %>
+  <% if @categorium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@categorium.errors.count, "error") %> prohibited this categorium from being saved:</h2>
+
+      <ul>
+      <% @categorium.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<%= f.hidden_field session[:idcliente]%>
+  <div class="field">
+    <%= f.label :Nombre_categoría%><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :Limite_de_Espacio %><br />
+    <%= f.number_field :limitSpace %>
+  </div>
+  <div class="field">
+    <%= f.label :Espacio_dispoble%><br />
+    <%= f.number_field :availableSpace %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

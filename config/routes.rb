@@ -1,13 +1,16 @@
 Files::Application.routes.draw do
 
+
+
   get "log_in" => "sessions#new", :as => "log_in"
   get "sign_up" => "clientes#new", :as => "sign_up"
   get "log_out" => "sessions#destroy", :as => "log_out"
+  get "cate" => "categoria#index", :as => "cate"
   root :to => "home#index"
   
   resources :clientes
   resources :sessions
-  
+  resources :categoria  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
