@@ -9,10 +9,8 @@ $(function(){
   
   },
   
-  title: {text: "Space Limit"},
-  
-
-  
+  title: {text: "Storage capacity"},
+    
   series: [{
     
     data: [["Available",<%= @categorium.availableSpace %>], ["Used",<%= @categorium.limitSpace - @categorium.availableSpace %>]]
@@ -35,5 +33,6 @@ $(function(){
 </div>
 
 
-<%= link_to 'Edit', edit_categorium_path(@categorium) %> |
-<%= link_to 'Back', categoria_path %>
+<%= link_to 'Editar', edit_categorium_path(@categorium) %> |
+<%= link_to 'Regresar', categoria_path %>
+

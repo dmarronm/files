@@ -12,20 +12,20 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username %>
+    <%= f.label :Usuario %><br />
+    <%= f.text_field :username %>*
   </div>
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.label :Nombre_del_usuario %><br />
+    <%= f.text_field :name %>*
   </div>
   <div class="field">
-    <%= f.label :password_hash %><br />
-    <%= f.password_field :password_hash %>
+    <%= f.label :Password %><br />
+    <%= f.password_field :password_hash %>*
   </div>
   <div class="field">
-    <%= f.label :password_salt %><br />
-    <%= f.password_field :password_salt %>
+    <%= f.label :Confirmar_password %><br />
+    <%= f.password_field :password_salt %>*
   </div>
   <%= f.hidden_field :limitSpace, :value => 5000 %>
   <%= f.hidden_field :availableSpace, :value => 5000 %>

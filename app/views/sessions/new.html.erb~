@@ -1,7 +1,7 @@
 <p>
 <br><br>
 </p>
-<table border="1" width="300" align="center">
+<table border="0" width="300" align="center">
 <tr align="center">
   <td>
     <h1>Autentificaci&oacute;n</h1>
@@ -18,7 +18,7 @@
     </tr>
     <tr align="center">
       <td>
-        <%= text_field_tag :username, params[:username] %>
+        <%= text_field_tag :username, params[:username] %>*
       </td>        
     </tr>
     <tr>

@@ -45,7 +45,7 @@ class CategoriaController < ApplicationController
 
     respond_to do |format|
       if @categorium.save
-        format.html { redirect_to @categorium, #notice: 'Categorium was successfully created.' }
+        format.html { redirect_to categoria_url, } #notice: 'Categorium was successfully created.' }
         format.json { render json: @categorium, status: :created, location: @categorium }
       else
         format.html { render action: "new" }

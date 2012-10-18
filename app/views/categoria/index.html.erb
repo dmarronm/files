@@ -1,5 +1,13 @@
+<table border="0" width="800">
+<tr>
+  <td>
 <h1>Categorias</h1>
-
+  </td>
+  <td align="right">
+  <%= link_to "Cerrar sesión", log_out_path %>
+  </td>
+<tr>
+</table>
 <table border="1" width="800">
   <tr>
     <th>Nombre</th>
@@ -15,9 +23,9 @@
     <td><%= categorium.name %></td>
     <td><%= categorium.limitSpace %></td>
     <td><%= categorium.availableSpace %></td>
-    <td><%= link_to 'Show', categorium %></td>
-    <td><%= link_to 'Edit', edit_categorium_path(categorium) %></td>
-    <td><%= link_to 'Destroy', categorium, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Gráfica', categorium %></td>
+    <td><%= link_to 'Editar', edit_categorium_path(categorium) %></td>
+    <td><%= link_to 'Eliminar', categorium, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
@@ -25,3 +33,4 @@
 <br />
 
 <%= link_to 'Crear nueva categoria', new_categorium_path %>
+
