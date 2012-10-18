@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :Usuario %><br />
+    <%= f.label :username %><br />
     <%= f.text_field :username %>
   </div>
   <div class="field">
@@ -21,24 +21,15 @@
   </div>
   <div class="field">
     <%= f.label :password_hash %><br />
-    <%= f.text_field :password_hash %>
+    <%= f.password_field :password_hash %>
   </div>
   <div class="field">
     <%= f.label :password_salt %><br />
-    <%= f.text_field :password_salt %>
+    <%= f.password_field :password_salt %>
   </div>
-  <div class="field">
-    <%= f.label :limitSpace %><br />
-    <%= f.number_field :limitSpace %>
-  </div>
-  <div class="field">
-    <%= f.label :availableSpace %><br />
-    <%= f.number_field :availableSpace %>
-  </div>
-  <div class="field">
-    <%= f.label :usedBandwith %><br />
-    <%= f.number_field :usedBandwith %>
-  </div>
+  <%= f.hidden_field :limitSpace, :value => 5000 %>
+  <%= f.hidden_field :availableSpace, :value => 5000 %>
+  <%= f.hidden_field :usedBandwith, :value => 0 %>  
   <div class="actions">
     <%= f.submit %>
   </div>

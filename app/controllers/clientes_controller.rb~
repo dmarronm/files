@@ -2,9 +2,9 @@ class ClientesController < ApplicationController
   # GET /clientes
   # GET /clientes.json
   def index
-    @clientes = Cliente.all
+#    @clientes = Cliente.all
 
-#    @clientes = Cliente.order("username").page(params[:page]).per(2)
+    @clientes = Cliente.order("username").page(params[:page]).per(2)
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @clientes }
