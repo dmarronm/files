@@ -9,8 +9,10 @@ $(function(){
   
   },
   
-  title: {text: "Storage capacity"},
-    
+  title: {text: "Space Limit"},
+  
+
+  
   series: [{
     
     data: [["Available",<%= @categorium.availableSpace %>], ["Used",<%= @categorium.limitSpace - @categorium.availableSpace %>]]
