@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     cliente = Cliente.authenticate(params[:username],params[:password])
     if cliente
         session[:idcliente] = cliente.idcliente
-        redirect_to cate_url, #:notice => session[:idcliente]
+        redirect_to categoria_url, #:notice => session[:idcliente]
     else
         flash.now.alert = "Usuario o password invalido"
         render "new"
