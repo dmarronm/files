@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  path: MyString
+  size: 1
+  fecha: 2012-10-18 19:14:54
+
+two:
+  path: MyString
+  size: 1
+  fecha: 2012-10-18 19:14:54

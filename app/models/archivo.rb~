@@ -1,0 +1,7 @@
+class Archivo < ActiveRecord::Base
+  belongs_to :categoria
+  
+  
+  
+  
+end

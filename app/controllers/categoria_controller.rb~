@@ -2,8 +2,9 @@ class CategoriaController < ApplicationController
   # GET /categoria
   # GET /categoria.json
   def index
-#    @categoria = Categorium.all
-     @categoria = Categorium.where(:idcliente => session[:idcliente])
+    @categoria = Categorium.order("name").page(params[:page]).per(2)
+#     @categoria = Categorium.where(:idcliente => session[:idcliente])
+     #
 
     respond_to do |format|
       format.html # index.html.erb
@@ -61,7 +62,8 @@ class CategoriaController < ApplicationController
 
     respond_to do |format|
       if @categorium.update_attributes(params[:categorium])
-        format.html { redirect_to @categorium, notice: 'Categorium was successfully updated.' }
+        format.html { redirect_to @categorium, } 
+        #notice: 'Categorium was successfully updated.' }
         format.json { head :ok }
       else
         format.html { render action: "edit" }

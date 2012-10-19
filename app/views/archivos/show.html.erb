@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Path:</b>
+  <%= @archivo.path %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%= @archivo.size %>
+</p>
+
+<p>
+  <b>Fecha:</b>
+  <%= @archivo.fecha %>
+</p>
+
+
+<%= link_to 'Edit', edit_archivo_path(@archivo) %> |
+<%= link_to 'Back', archivos_path %>

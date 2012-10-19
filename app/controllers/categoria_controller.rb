@@ -2,8 +2,9 @@ class CategoriaController < ApplicationController
   # GET /categoria
   # GET /categoria.json
   def index
-#    @categoria = Categorium.all
+#    @categoria = Categorium.order("name").page(params[:page]).per(2)
      @categoria = Categorium.where(:idcliente => session[:idcliente])
+     #
 
     respond_to do |format|
       format.html # index.html.erb
