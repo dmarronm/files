@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :fecha %><br />
-    <%= f.hidden_field :fecha, :value => Date.now.to_datetime %>
+    <%= f.hidden_field :fecha, :value => DateTime.now %>
   </div>
   <div class="actions">
     <%= f.submit %>

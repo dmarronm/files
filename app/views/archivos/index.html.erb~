@@ -8,11 +8,11 @@
     <th></th>
   </tr>
 
-<% @archivo.each do |archivo| %>
+<% @archivos.each do |archivo| %>
   <tr>
     <td><%= archivo.path %></td>
     <td align="right"><%= archivo.size %></td>
-    <td><%= archivo.fecha %></td>
+    <td><%= archivo.fecha.to_s(:db) %></td>
     <td><%= link_to 'Borrar', archivo, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>

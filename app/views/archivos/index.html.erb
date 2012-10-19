@@ -12,7 +12,7 @@
   <tr>
     <td><%= archivo.path %></td>
     <td align="right"><%= archivo.size %></td>
-    <td><%= archivo.fecha %></td>
+    <td><%= archivo.fecha.to_s(:on_date) %></td>
     <td><%= link_to 'Borrar', archivo, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
