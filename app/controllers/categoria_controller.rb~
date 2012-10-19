@@ -2,8 +2,8 @@ class CategoriaController < ApplicationController
   # GET /categoria
   # GET /categoria.json
   def index
-    @categoria = Categorium.order("name").page(params[:page]).per(2)
-#     @categoria = Categorium.where(:idcliente => session[:idcliente])
+#    @categoria = Categorium.order("name").page(params[:page]).per(2)
+     @categoria = Categorium.where(:idcliente => session[:idcliente])
      #
 
     respond_to do |format|
@@ -43,9 +43,11 @@ class CategoriaController < ApplicationController
   # POST /categoria.json
   def create
     @categorium = Categorium.new(params[:categorium])
+    @categorium.availableSpace = @categorium.limitSpace
 
     respond_to do |format|
       if @categorium.save
+      
         format.html { redirect_to categoria_url, } #notice: 'Categorium was successfully created.' }
         format.json { render json: @categorium, status: :created, location: @categorium }
       else
@@ -63,7 +65,6 @@ class CategoriaController < ApplicationController
     respond_to do |format|
       if @categorium.update_attributes(params[:categorium])
         format.html { redirect_to @categorium, } 
-        #notice: 'Categorium was successfully updated.' }
         format.json { head :ok }
       else
         format.html { render action: "edit" }
@@ -83,4 +84,5 @@ class CategoriaController < ApplicationController
       format.json { head :ok }
     end
   end
+  
 end

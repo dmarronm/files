@@ -1,6 +1,6 @@
 class Categorium < ActiveRecord::Base
   belongs_to :cliente
-  attr_accessible :name, :limitSpace, :availableSpace => 10, :idcliente
+  attr_accessible :name, :limitSpace, :availableSpace, :idcliente
   
    validates :name, :presence => true
    

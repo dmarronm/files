@@ -20,7 +20,7 @@
     <%= f.number_field :limitSpace %>*
   </div>
   <div class="field">
-    <%= f.hidden_field :availableSpace, :value => 0 %>
+    <%= f.hidden_field :availableSpace, :value => :limitSpace %>
   </div>
   <div class="actions">
     <%= f.submit %>

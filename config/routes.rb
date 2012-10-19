@@ -10,7 +10,8 @@ Files::Application.routes.draw do
   resources :clientes
   resources :sessions
   resources :categoria  
-  resources :archivos
+  resources :archivos 
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
