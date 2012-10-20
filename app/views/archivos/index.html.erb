@@ -1,4 +1,4 @@
-<h1>Listing archivos</h1>
+<h1>Archivos</h1>
 
 <table>
   <tr>
@@ -7,7 +7,6 @@
     <th>Fecha</th>
     <th></th>
   </tr>
-
 <% @archivos.each do |archivo| %>
   <tr>
     <td><%= archivo.path %></td>
@@ -20,7 +19,7 @@
 
 <br />
 
-<%= link_to 'New Archivo', new_archivo_path %>
+<%= link_to 'Subir Archivo', subir_path(params[:idcategoria]) %>
 
 <%= link_to 'Regresar', categoria_url %>
 

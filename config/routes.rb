@@ -5,6 +5,8 @@ Files::Application.routes.draw do
   get "log_out" => "sessions#destroy", :as => "log_out"
   get "categoria" => "categoria#index", :as => "categoria"
   get "archivos" => "archivos#index", :as => "archivos"
+  match 'local/:idcategoria' => 'archivos#index', :as => "local"
+  match 'subir/:idcategoria' => 'archivos#new', :as => "subir"
   root :to => "home#index"
   
   resources :clientes

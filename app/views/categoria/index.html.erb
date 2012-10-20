@@ -28,7 +28,7 @@
     <td><%= link_to 'Gráfica', categorium %></td>
     <td><%= link_to 'Editar', edit_categorium_path(categorium) %></td>
     <td><%= link_to 'Eliminar', categorium, confirm: 'Are you sure?', method: :delete %></td>
-    <td><%= link_to 'Archivos', archivos_path(categorium) %></td>
+    <td><%= link_to 'Archivos', local_path(categorium) %></td>
   </tr>
 <% end %>
 </table>

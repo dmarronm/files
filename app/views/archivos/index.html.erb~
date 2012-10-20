@@ -1,4 +1,4 @@
-<h1>Listing archivos</h1>
+<h1>Archivos</h1>
 
 <table>
   <tr>
@@ -7,12 +7,12 @@
     <th>Fecha</th>
     <th></th>
   </tr>
-
+-<%= params[:idcategoria]%>-
 <% @archivos.each do |archivo| %>
   <tr>
     <td><%= archivo.path %></td>
     <td align="right"><%= archivo.size %></td>
-    <td><%= archivo.fecha.to_s(:db) %></td>
+    <td><%= archivo.fecha.to_s(:on_date) %></td>
     <td><%= link_to 'Borrar', archivo, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
@@ -20,7 +20,7 @@
 
 <br />
 
-<%= link_to 'New Archivo', new_archivo_path %>
+<%= link_to 'Subir Archivo', subir_path(params[:idcategoria]) %>
 
 <%= link_to 'Regresar', categoria_url %>
 
