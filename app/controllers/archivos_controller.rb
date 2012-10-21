@@ -5,7 +5,7 @@ class ArchivosController < ApplicationController
 #    @archivos = Archivo.all
 #     @archivo = Archivo.find(params[:id])
     @archivos = Archivo.where(:idcategoria => params[:idcategoria])
-
+    session[:idcategoria]=params[:idcategoria]
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @archivos }
