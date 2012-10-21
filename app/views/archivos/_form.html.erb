@@ -20,8 +20,8 @@
     <%= f.number_field :size %>
   </div>
   <div class="field">
-  <%= DateTime.now %>
-    <%= f.label :fecha %><br />
+<%= DateTime.now.to_s(:on_date) %>
+    <br />
     <%= f.hidden_field :fecha, :value => DateTime.now %>
   </div>
   <div class="actions">

@@ -10,7 +10,7 @@
       </ul>
     </div>
   <% end %>
- <%= f.hidden_field :idcategoria, :value => 12 %>
+ <%= f.hidden_field :idcategoria, :value => params[:idcategoria] %>
   <div class="field">
     <%= f.label :path %><br />
     <%= f.text_field :path %>
@@ -20,8 +20,8 @@
     <%= f.number_field :size %>
   </div>
   <div class="field">
-  <%= DateTime.now %>
-    <%= f.label :fecha %><br />
+  <%= f.label :fecha %> <%= DateTime.now.to_s(:on_date) %>
+    <br />
     <%= f.hidden_field :fecha, :value => DateTime.now %>
   </div>
   <div class="actions">
