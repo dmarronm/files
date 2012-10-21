@@ -46,7 +46,10 @@ class ArchivosController < ApplicationController
 
     respond_to do |format|
       if @archivo.save
-        format.html { redirect_to @archivo, notice: 'Archivo was successfully created.' }
+        @categoria = Categorium.find(session[:idcategoria])
+        @categoria.availableSpace = @categoria.availableSpace - @archivo.size
+        @categoria.save
+        format.html { redirect_to @archivo, notice: 'File was successfully created.' }
         format.json { render json: @archivo, status: :created, location: @archivo }
       else
         format.html { render action: "new" }
@@ -62,7 +65,7 @@ class ArchivosController < ApplicationController
 
     respond_to do |format|
       if @archivo.update_attributes(params[:archivo])
-        format.html { redirect_to @archivo, notice: 'Archivo was successfully updated.' }
+        format.html { redirect_to @archivo, notice: 'File was successfully updated.' }
         format.json { head :ok }
       else
         format.html { render action: "edit" }
