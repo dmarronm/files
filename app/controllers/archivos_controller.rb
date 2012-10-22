@@ -49,7 +49,7 @@ class ArchivosController < ApplicationController
         @categoria = Categorium.find(session[:idcategoria])
         @categoria.availableSpace = @categoria.availableSpace - @archivo.size
         @categoria.save
-        format.html { redirect_to @archivo, notice: 'File was successfully created.' }
+        format.html { redirect_to local_url(session[:idcategoria]),} # notice: 'El archivo subio exitosamente.' }
         format.json { render json: @archivo, status: :created, location: @archivo }
       else
         format.html { render action: "new" }

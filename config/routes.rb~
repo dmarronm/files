@@ -6,6 +6,8 @@ Files::Application.routes.draw do
   get "categoria" => "categoria#index", :as => "categoria"
   get "archivos" => "archivos#index", :as => "archivos"
   match 'local/:idcategoria' => 'archivos#index', :as => "local"
+  match 'local2/:idcategoria' => 'archivos#index2', :as => "local"
+  match 'subir/:idcategoria' => 'archivos#new', :as => "subir"
   root :to => "home#index"
   
   resources :clientes

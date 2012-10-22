@@ -1,0 +1,25 @@
+<h1>Archivos</h1>
+
+<table>
+  <tr>
+    <th>Path</th>
+    <th>Size</th>
+    <th>Fecha</th>
+    <th></th>
+  </tr>
+<% @archivos.each do |archivo| %>
+  <tr>
+    <td><%= archivo.path %></td>
+    <td align="right"><%= archivo.size %></td>
+    <td><%= archivo.fecha.to_s(:on_date) %></td>
+    <td><%= link_to 'Borrar', archivo, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Subir Archivo', subir_path(params[:idcategoria]) %>
+
+<%= link_to 'Regresar', categoria_url %>
+

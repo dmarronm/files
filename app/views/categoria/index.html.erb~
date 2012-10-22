@@ -28,7 +28,11 @@
     <td><%= link_to 'Gráfica', categorium %></td>
     <td><%= link_to 'Editar', edit_categorium_path(categorium) %></td>
     <td><%= link_to 'Eliminar', categorium, confirm: 'Are you sure?', method: :delete %></td>
-    <td><%= link_to 'Archivos', local_archivos_path(categorium) %></td>
+<% if categorium.availableSpace == 0 %>
+    <td><%= link_to 'Archivos', local2_path(categorium) %></td>
+<% elsif %>
+    <td><%= link_to 'Archivos', local_path(categorium) %></td>
+<% end %>    
   </tr>
 <% end %>
 </table>

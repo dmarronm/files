@@ -1,3 +1,6 @@
+<table border="0" width="350" align="center">
+<tr>
+<td>
 <%= form_for(@archivo) do |f| %>
   <% if @archivo.errors.any? %>
     <div id="error_explanation">
@@ -10,21 +13,45 @@
       </ul>
     </div>
   <% end %>
+</td>
+</tr>  
+<tr>
+<td>  
  <%= f.hidden_field :idcategoria, :value => params[:idcategoria] %>
   <div class="field">
     <%= f.label :path %><br />
     <%= f.text_field :path %>
   </div>
+</td>
+</tr>    
+<tr>
+<td>  
   <div class="field">
     <%= f.label :size %><br />
     <%= f.number_field :size %>
   </div>
+</td>
+</tr>    
+<tr>
+<td align="center">  
   <div class="field">
 <%= DateTime.now.to_s(:on_date) %>
     <br />
-    <%= f.hidden_field :fecha, :value => DateTime.now %>
+    <%= f.hidden_field :fecha, :value => DateTime.now.to_s(:on_date) %>
   </div>
+</td>
+</tr>    
+<tr>
+<td align="right">  
   <div class="actions">
     <%= f.submit %>
   </div>
+</td>
+</tr>    
 <% end %>
+<tr>
+<td>
+  <%= link_to 'Regresar', local_path %>
+</td>
+</tr>
+</table>

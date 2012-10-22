@@ -17,4 +17,4 @@
 
 
 <%= link_to 'Edit', edit_archivo_path(@archivo) %> |
-<%= link_to 'Back', local_path(params[:idcategoria]) %>
+<%= link_to 'Back', local_path(session[:idcategoria]) %>

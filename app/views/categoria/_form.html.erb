@@ -1,4 +1,7 @@
+<table border="0" width="400" align="center">
 <%= form_for(@categorium) do |f| %>
+<tr>
+<td>
   <% if @categorium.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@categorium.errors.count, "error") %> prohibited this categorium from being saved:</h2>
@@ -10,19 +13,36 @@
       </ul>
     </div>
   <% end %>
+</td>
+</tr>  
+<tr>
+<td>  
   <%= f.hidden_field :idcliente, :value => session[:idcliente] %>
   <div class="field">
     <%= f.label :Nombre_categoría%><br />
     <%= f.text_field :name %>*
   </div>
+</td>
+</tr>  
+<tr>
+<td>  
   <div class="field">
     <%= f.label :Limite_de_Espacio %><br />
     <%= f.number_field :limitSpace %>*
   </div>
-  <div class="field">
-    <%= f.hidden_field :availableSpace, :value => :limitSpace %>
-  </div>
+</td>
+</tr>  
+<tr>
+<td align="right">  
   <div class="actions">
     <%= f.submit %>
   </div>
+</td>
+</tr>    
 <% end %>
+<tr>
+<td>  
+  <%= link_to 'Regresar', categoria_path %>
+</td>
+</tr>    
+</table>

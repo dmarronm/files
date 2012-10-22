@@ -1,6 +1,6 @@
-<h1>Archivos</h1>
+<h1>Archivos de la categor&iacute;a</h1>
 
-<table>
+<table border="1" width="800">
   <tr>
     <th>Path</th>
     <th>Size</th>
@@ -18,8 +18,9 @@
 </table>
 
 <br />
-
-<%= link_to 'Subir Archivo', subir_path(params[:idcategoria]) %>
-
+<%= params[:availableSpace] %>
+<% if params[:availableSpace] != 0 %>
+   <%= link_to 'Subir Archivo', subir_path(params[:idcategoria]) %>
+<% end %>
 <%= link_to 'Regresar', categoria_url %>
 

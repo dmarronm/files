@@ -1,28 +1,53 @@
+<table border="1" width="600" align="center"> 
+<tr>
+<td align="center">
+<h1>Registro de un nuevo cliente</h1>
+</td>
+</tr>
+<tr>
+<td>
+<table border="1" width="400" align="center"> 
 <%= form_for(@cliente) do |f| %>
+<tr>
+<td>
   <% if @cliente.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@cliente.errors.count, "error") %> prohibited this cliente from being saved:</h2>
-
       <ul>
       <% @cliente.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
-    </div>
+    </div>    
   <% end %>
-
+</td>
+</tr>  
+<tr>
+<td>
   <div class="field">
     <%= f.label :Usuario %><br />
     <%= f.text_field :username %>*
   </div>
+</td>
+</tr>    
+<tr>
+<td>  
   <div class="field">
     <%= f.label :Nombre_del_usuario %><br />
     <%= f.text_field :name %>*
   </div>
+</td>
+</tr>    
+<tr>
+<td>  
   <div class="field">
     <%= f.label :Password %><br />
     <%= f.password_field :password_hash %>*
   </div>
+</td>
+</tr>    
+<tr>
+<td>    
   <div class="field">
     <%= f.label :Confirmar_password %><br />
     <%= f.password_field :password_salt %>*
@@ -30,7 +55,24 @@
   <%= f.hidden_field :limitSpace, :value => 5000 %>
   <%= f.hidden_field :availableSpace, :value => 5000 %>
   <%= f.hidden_field :usedBandwith, :value => 0 %>  
+</td>
+</tr>    
+<tr>
+<td align="right">    
   <div class="actions">
     <%= f.submit %>
   </div>
+</td>
+</tr>    
 <% end %>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+  <%= link_to 'Regresar', root_path %>
+</td>
+</tr>
+</table>
