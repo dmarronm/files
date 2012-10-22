@@ -2,5 +2,3 @@
 
 <%= render 'form1' %>
 
-<%= link_to 'Grafica', @categorium %> |
-<%= link_to 'Regresar', categoria_path %>

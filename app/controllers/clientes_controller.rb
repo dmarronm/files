@@ -4,7 +4,7 @@ class ClientesController < ApplicationController
   def index
 #    @clientes = Cliente.all
 
-    @clientes = Cliente.order("username").page(params[:page]).per(2)
+    @clientes = Cliente.order("username").page(params[:page]).per(1)
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @clientes }

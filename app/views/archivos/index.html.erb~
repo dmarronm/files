@@ -1,7 +1,19 @@
+<br/>
+<table border="0" width="800">
+<tr>
+<td>
+  <hr width="100%">
+</td>
+</tr>  
+<tr>
+<td>
 <h1>Archivos de la categor&iacute;a</h1>
-
-<table>
-  <tr>
+</td>
+</tr>
+</table>
+<%= paginate @archivos %>
+<table border="1" width="800">
+  <tr class="titulo" bgcolor="#2985A3">
     <th>Path</th>
     <th>Size</th>
     <th>Fecha</th>
@@ -9,9 +21,9 @@
   </tr>
 <% @archivos.each do |archivo| %>
   <tr>
-    <td><%= archivo.path %></td>
-    <td align="right"><%= archivo.size %></td>
-    <td><%= archivo.fecha.to_s(:on_date) %></td>
+    <td class="texto"><%= archivo.path %></td>
+    <td align="right" class="texto"><%= archivo.size %></td>
+    <td class="texto"><%= archivo.fecha.to_s(:on_date) %></td>
     <td><%= link_to 'Borrar', archivo, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
@@ -20,7 +32,14 @@
 <br />
 <%= params[:availableSpace] %>
 <% if params[:availableSpace] != 0 %>
-   <%= link_to 'Subir Archivo', subir_path(params[:idcategoria]) %>
+   <%= link_to 'Subir Archivo', subir_path(params[:idcategoria]) %> |
 <% end %>
 <%= link_to 'Regresar', categoria_url %>
+<table border="0" width="800">
+<tr>
+<td>
+  <hr width="100%">
+</td>
+</tr>  
+</table>
 

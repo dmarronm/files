@@ -4,7 +4,7 @@ class ArchivosController < ApplicationController
   def index
 #    @archivos = Archivo.all
 #     @archivo = Archivo.find(params[:id])
-    @archivos = Archivo.where(:idcategoria => params[:idcategoria])
+    @archivos = Archivo.where(:idcategoria => params[:idcategoria]).page(params[:page]).per(2)
     session[:idcategoria]=params[:idcategoria]
     respond_to do |format|
       format.html # index.html.erb

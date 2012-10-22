@@ -5,3 +5,21 @@
  *= require_self
  *= require_tree . 
 */
+
+h1 {
+ color: #2985A3;
+ font-weight: bold;
+}
+
+.field {
+ color: #2985A3;
+}
+
+.texto {
+ color: #2985A3;
+}
+
+.titulo {
+ color: #FFFFFF;
+ font-weight: bold;
+}

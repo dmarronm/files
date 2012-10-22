@@ -1,5 +1,10 @@
-
+<br/>
 <table border="0" width="800">
+<tr>
+  <td colspan="2">
+    <hr width="100%">
+  </td>
+</tr>
 <tr>
   <td>
 <h1>Categorias</h1>
@@ -10,7 +15,7 @@
 </tr>
 </table>
 <table border="1" width="800">
-  <tr>
+  <tr class="titulo" bgcolor="#2985A3">
     <th>Nombre</th>
     <th>Limite de espacio</th>
     <th>Espacio disponible</th>
@@ -22,9 +27,9 @@
 
 <% @categoria.each do |categorium| %>
   <tr>
-    <td><%= categorium.name %></td>
-    <td align="right"><%= categorium.limitSpace %></td>
-    <td align="right"><%= categorium.availableSpace %></td>
+    <td class="texto"><%= categorium.name %></td>
+    <td align="right" class="texto"><%= categorium.limitSpace %></td>
+    <td align="right" class="texto"><%= categorium.availableSpace %></td>
     <td><%= link_to 'Gráfica', categorium %></td>
     <td><%= link_to 'Editar', edit_categorium_path(categorium) %></td>
     <td><%= link_to 'Eliminar', categorium, confirm: 'Are you sure?', method: :delete %></td>
@@ -32,8 +37,18 @@
   </tr>
 <% end %>
 </table>
+<br/>
+<table border="0" width="800">
+<tr>
+  <td>
+  <%= link_to 'Crear nueva categoria', new_categorium_path %> 
+  </td>
+</tr>
+<tr>
+  <td>
+    <hr width="100%">
+  </td>
+</tr>
+</table>
 
-<br />
-
-<%= link_to 'Crear nueva categoria', new_categorium_path %>
 

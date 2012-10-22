@@ -1,3 +1,5 @@
+<br/>
+<hr>
 <table border="0" width="350" align="center">
 <tr>
 <td>
@@ -37,7 +39,7 @@
   <div class="field">
 <%= DateTime.now.to_s(:on_date) %>
     <br />
-    <%= f.hidden_field :fecha, :value => DateTime.now %>
+    <%= f.hidden_field :fecha, :value => DateTime.now.to_s(:on_date) %>
   </div>
 </td>
 </tr>    

@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Files</title>
+  <title>FileAttacher</title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
-  <%= javascript_include_tag "jquery-1.8.1.min", "highcharts" %>
+  <%= javascript_include_tag "highcharts" %>
   <%= csrf_meta_tags %>
+  
+
 </head>
-<body>
+<body background="/assets/fondo.jpg">
 
 <% flash.each do |name, msg| %>
   <table border="1" width="40%" align="center" height="80">

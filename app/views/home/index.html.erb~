@@ -1,16 +1,44 @@
-<table border="1" width="800">
+<table border="0" width="800" align="center">
+<tr>
+<td colspan="2">
+<br/>
+<hr width="100%">
+</td>
+</tr>
 <tr align="center">
   <td colspan="2"><h1>FileAttacher</h1></td>
 </tr>
 <tr>
-  <td width="80%" rowspan="2">Descripci&oacute;n</td>
-  <td width="20%">
+  <td width="80%" rowspan="2">
+  <table border="0" width="100%">
+  <tr>
+    <td >
+<p class="texto">Cada vez más los usuarios optan por la opción de guardar archivos en la nube, teniendo todos sus archivos importantes en todo momento y lugar. Esta tendencia que viene creciendo con más fuerza, es por eso que te damos esta opción en donde podrás tener todas tus cosas estés donde estés.</p>
+
+<p class="texto1">Muchas ventajas puede brindarnos la nube para movernos y tener nuestros archivos, trabajos y documentos en todo momento, o porque no realizar un backups y teniendo siempre archivos de resguardo en caso de algún imprevisto.</p>
+
+<p align="center"><b>Prueba nuestra opción.</b></p>
+    </td>
+    <td>
+      <img src="cloud.png"/>
+    </td>    
+  </tr>  
+  </table>
+  
+  </td>   
+  <td width="20%" align="center">
   <%= link_to "Autentificación", log_in_path %>
   </td>
 </tr>
 <tr>
-  <td>
-  <%= link_to "Registro", cliente_new_path %>
+  <td align="center">
+  <%= link_to "Registro", sign_up_path %>
   </td>
+</tr>
+<tr>
+<td colspan="2">
+<br/>
+<hr width="100%">
+</td>
 </tr>
 </table>

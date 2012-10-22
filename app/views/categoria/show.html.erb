@@ -21,18 +21,47 @@ $(function(){
 });
 
 </script>
-
+<br/>
 <p id="notice"><%= notice %></p>
+<table width="800" align="center" border="0">
+<tr>
+<td>
+  <hr width="100%">
+</td>
+</tr>
+<tr>
+<td>
+  <h1 align="center">Categoria: <%= @categorium.name %></h1>  
+</td>
+</tr>
+</table>
 
 <p>
-  <b>Categoria:</b>
-  <%= @categorium.name %>
+
 </p>
 
-<div id="limitSpaceChart" style ="width:560px; height:300px;">
+<table width="800" align="center" border="0">
+<tr>
+<td>
+<div id="limitSpaceChart" style ="width:560px; height:300px;" >
 </div>
+</td>
+</tr>
+</table>
 
 
+<table width="800" align="center" border="0">
+<tr>
+<td>
+<br />
 <%= link_to 'Editar', edit_categorium_path(@categorium) %> |
 <%= link_to 'Regresar', categoria_path %>
-
+<br />
+</td>
+</tr>
+<tr>
+<td>
+  <hr width="100%">
+</td>
+</tr>
+</table>
