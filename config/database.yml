@@ -32,7 +32,7 @@ test: &test
   host: bitacora.ccm.itesm.mx
 
 production:
-  adapter: pg
+  adapter: mysql2
   encoding: utf8
   reconnect: false
   database: fileattacher
